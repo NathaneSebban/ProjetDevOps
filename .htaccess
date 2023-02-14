@@ -1,0 +1,40 @@
+AddDefaultCharset "utf-8"
+
+# On interdit l'acces au fichier .htacces
+<Files .htaccess>
+    order allow,deny
+    deny from allow
+</Files>
+
+# Empecher l'accès au index
+Options All -Indexes
+
+# Tous les fichier contenant ...
+<FilesMatch "\.(html|php|js|css|txt)$">
+    AddDefaultCharset UTF-8
+    DefaultLanguage fr-fr
+</FilesMatch>
+
+RewriteEngine On
+
+RewriteRule ^$ view/index.php
+RewriteRule ^([0-9]+)$ view/index.php?idCategorie=$1
+
+RewriteRule ^product/([0-9]+)$ view/product.php?idProduct=$1
+
+
+
+RewriteRule ^Se-connecter$ view/login.php
+RewriteRule ^Inscription$ view/register.php
+RewriteRule ^Deconnexion$ Controller/functions/logout.php
+
+RewriteRule ^Nous-contacter$ view/contact.php
+
+RewriteRule ^ajoutPanier/([0-9]+)$ Controller/functions/addPanier.php?id=$1
+RewriteRule ^delPanier/([0-9]+)$ Controller/functions/delPanier.php?id=$1
+RewriteRule ^Votre-panier$ view/cart.php
+
+RewriteRule ^Information$ view/information.php
+RewriteRule ^CGV$ view/cgv.php
+RewriteRule ^CGU$ view/cgu.php
+RewriteRule ^A-propos$ view/about.php

@@ -1,0 +1,296 @@
+@font-face {
+    font-family: Title;
+    src: url(../fonts/Cavilant.otf);
+}
+
+@font-face {
+    font-family: NormalText;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html,
+body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+}
+
+main {
+    min-height: calc(80vh);
+}
+
+::placeholder { 
+    color: rgb(19, 15, 15) !important;
+    opacity: 1; 
+  }
+
+body {
+    overflow-x: hidden;
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/84526d58-475e-4e6f-9c81-d2d78ddce803/e447cf05-aefa-4af3-b65e-c88c2587f9fb/FR-fr-20221228-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    font-family: NormalText !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+/* NavBar  */
+header {
+    font-size: 1.1rem;
+}
+
+.navbar-brand {
+    font-size: 1.8rem !important;
+    font-weight: bolder;
+    font-family: Title !important;
+}
+
+header .nav-link {
+    color: #adadad !important;
+}
+
+header .nav-link.active {
+    color: #fff !important;
+}
+
+header .nav-item i {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.products {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, .9) 80%, rgba(0, 0, 0, 0) 100%);
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: 100%;
+    min-height: 100vh;
+}
+
+hr {
+    height: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    opacity: 1 !important;
+    width: 500px !important;
+}
+
+.img-product {
+    width: 200px;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.product:hover .img-product {
+    transform: scale(1.05);
+    filter: blur(3px);
+}
+
+.hidden-button {
+    position: absolute;
+    bottom: 20px;
+    left: 15%;
+    width: 80%;
+    transition: all .3s ease;
+    background-color: #DC3545;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    z-index: 2;
+    opacity: 0;
+}
+
+.product:hover .hidden-button {
+    opacity: 1;
+}
+
+.button-prim {
+    width: 80%;
+    transition: all .3s ease;
+    background-color: #DC3545;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.alert {
+    position: absolute !important;
+    width: 40% !important;
+    top: 150px !important;
+    right: 20px !important;
+    z-index: 99999999999999;
+}
+
+#panier .card {
+    margin: 20px auto;
+    max-width: 950px;
+    width: 90%;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1rem;
+    border: transparent;
+}
+
+@media(max-width:767px) {
+    #panier .card {
+        margin: 3vh auto;
+    }
+}
+
+#panier .card {
+    background-color: rgba(0, 0, 0, 0) !important;
+    color: #fff !important;
+    font-weight: bolder !important;
+    box-shadow: none !important;
+}
+
+#panier .cart {
+    background-color: none !important;
+    padding: 4vh 5vh;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+@media(max-width:767px) {
+    #panier .cart {
+        padding: 4vh;
+        border-bottom-left-radius: unset;
+        border-top-right-radius: 1rem;
+    }
+}
+
+#panier .summary {
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 4vh;
+}
+
+@media(max-width:767px) {
+    #panier .summary {
+        border-top-right-radius: unset;
+        border-bottom-left-radius: 1rem;
+    }
+}
+
+#panier .summary .col-2 {
+    padding: 0;
+}
+
+#panier .summary .col-10 {
+    padding: 0;
+}
+
+#panier .row {
+    margin: 0;
+}
+
+#panier .title b {
+    font-size: 1.5rem;
+}
+
+#panier .main {
+    margin: 0;
+    padding: 2vh 0;
+    width: 100%;
+}
+
+#panier .col-2,
+#panier .col {
+    padding: 0 1vh;
+}
+
+#panier a {
+    padding: 0 1vh;
+}
+
+#panier .close {
+    margin-left: auto;
+    font-size: 0.7rem;
+}
+
+#panier img {
+    width: 3.5rem;
+}
+
+#panier .back-to-shop {
+    margin-top: 4.5rem;
+}
+
+#panier h5 {
+    margin-top: 4vh;
+}
+
+#panier hr {
+    margin-top: 1.25rem;
+}
+
+#panier form {
+    padding: 2vh 0;
+}
+
+#panier input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+#panier .btn {
+    background-color: #000;
+    border-color: #000;
+    color: white;
+    width: 100%;
+    font-size: 0.7rem;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 0;
+}
+
+#panier .btn:focus {
+    box-shadow: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    -webkit-box-shadow: none;
+    transition: none;
+}
+
+#panier .btn:hover {
+    color: white;
+}
+
+#panier a {
+    color: black;
+}
+
+#panier a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 650px) {
+    .ad {
+        flex-direction: column !important;
+    }
+
+    .ad>div {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
+.info .media i {
+    font-size: 3rem;
+}
