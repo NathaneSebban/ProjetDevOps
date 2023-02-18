@@ -11,7 +11,7 @@ class Core
     {
 
         if (!self::$bdd) {
-            return new Database('root', '', 'flixdeo');
+            return new Database('root', '', 'flixdeonanj');
         }
         return self::$bdd;
     }
